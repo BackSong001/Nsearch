@@ -1,16 +1,12 @@
-# React + Vite
+# NSearch 프로젝트 소개
+## 서비스 개요
+NSerch(Naver Search Helper)는 네이버 오픈 API를 활용하여 사용자 맞춤형 검색 결과와 고급 필터링 기능을 제공하는 React 기반 웹 애플리케이션입니다. 단순 검색을 넘어 특정 카테고리의 데이터를 빠르게 수집할 수 있습니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 주요 핵심 기능
+이 서비스는 모두, 지식iN, 블로그, 뉴스, 웹문서, 이미지, 쇼핑 등 사용자가 원하는 영역만 골라서 정밀 검색을 수행할 수 있는 통합 카테고리 선택 기능을 제공합니다. 또한 한 페이지에 노출되는 데이터의 양을 10개에서 1000개까지 사용자가 직접 선택하여 정보 밀도를 조절할 수 있는 검색량 제어 로직을 갖추고 있습니다.
 
-Currently, two official plugins are available:
+## 사용자 인터페이스 및 디자인
+디자인 측면에서는 네이버의 브랜드 아이덴티티인 초록색(#03C75A)을 메인 컬러로 사용하여 익숙하고 깔끔한 UI를 구현했습니다. 검색창 하단에는 반투명 박스 형태의 인스트럭션 가이드를 상시 배치하여 별도의 매뉴얼 없이도 숙련된 검색이 가능하도록 돕습니다. 검색 결과는 가독성 높은 카드 뷰 레이아웃으로 배치되었으며, 각 카드를 클릭하면 원문 소스로 즉시 이동할 수 있는 직관적인 구조를 채택했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 기술적 구현 특징
+Vite Proxy 설정을 활용하여 별도의 백엔드 서버 없이도 브라우저에서 네이버 API와 안정적으로 통신하며 CORS 문제를 해결했습니다. React의 컴포넌트 기반 설계를 통해 검색바, 결과 카드, 로딩 스피너 등을 모듈화하여 유지보수 효율을 높였으며, PC와 모바일 등 다양한 기기 환경에 최적화된 화면을 보여주는 반응형 웹 레이아웃을 적용했습니다.
